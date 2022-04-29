@@ -63,26 +63,68 @@ submit = driver.find_element(By.NAME, "querySubmit").click()
 
 meeting_noti = driver.find_elements(By.ID, "t2")[1]
 meeting_noti.click()
-try:
-    final_page = driver.find_element(By.PARTIAL_LINK_TEXT, '末頁').click()
-    pre_page = driver.find_element(By.PARTIAL_LINK_TEXT, '上一頁')
 
 i = 10 #從最底下開始找
 j = 0  #找過的資料數目
-while i <= 10:
-    try:
-        driver.find_element(By.XPATH, '//*[@id="listTBODY"]/tr[i]').click()
-        meetDate = driver.find_element(By.NAME, "meetDate").get_attribute('value')
-        meet_type = driver.find_element(By.NAME, "meetType").get_attribute('value')
-        if meet_type == "02" and meetDate == info["meet_date"]:
-            driver.find_element(By.NAME, "update").click()
-            driver.find_element(By.NAME, "offDoc").send_keys("/" + info["number"])
-            driver.find_element(By.NAME, "confirm").click()
-            break
-        else:
-            i -= 1
-            j += 1
-            if j >= 10:
+r = 11 - i
+try:
+    final_page = driver.find_element(By.PARTIAL_LINK_TEXT, '末頁').click()
+    pre_page = driver.find_element(By.PARTIAL_LINK_TEXT, '上一頁')
+    while j > 10:
+        try:
+            driver.find_element(By.XPATH, '//*[@id="listTBODY"]/tr[i]').click()
+            meetDate = driver.find_element(By.NAME, "meetDate").get_attribute('value')
+            meet_type = driver.find_element(By.NAME, "meetType").get_attribute('value')
+            if meet_type == "02" and meetDate == info["meet_date"]:
+                driver.find_element(By.NAME, "update").click()
+                driver.find_element(By.NAME, "offDoc").send_keys("/" + info["number"])
+                driver.find_element(By.NAME, "confirm").click()
+                break
+            else:
+                i -= 1
+                j += 1
+                if j >= 10:
+                    insert = driver.find_element(By.ID, "spanInsert").click()
+                    paper_num = driver.find_element(By.NAME, "offDoc").send_keys(info["number"])
+
+                    data_type = Select(driver.find_element(By.NAME, "meetstep")).select_by_index(1)
+                    meet_type = Select(driver.find_element(By.NAME, "meetType")).select_by_index(7) #1: 會員大會, 2: 理監事, 7:理監事聯席
+                    meetDate = driver.find_element(By.NAME, "meetDate").send_keys(info["meet_date"])
+
+                    year = driver.find_element(By.NAME, "expNum")
+                    year.clear()
+                    year.send_keys(info["year"])
+                    Num = driver.find_element(By.NAME, "meetNum").send_keys(info["Num"])
+                    hour = Select(driver.find_element(By.NAME, "meetTime_h")).select_by_index(info["time_hour"])
+                    minite = Select(driver.find_element(By.NAME, "meetTime_m")).select_by_index(info["time_min"] +1)
+                    location = driver.find_element(By.NAME, "location").send_keys(info["place"])
+                    staff = driver.find_element(By.NAME, "undertaker").send_keys(info["staff"])
+                    phone = driver.find_element(By.NAME, "undertaker_tel").send_keys(info["phone"])
+                    confirm = driver.find_element(By.NAME, "confirm").click()
+                    break
+        except:
+            if i == 1:
+                pre_page.click()
+                i = 10
+            elif i > 1:
+                i -= 1
+except:
+    while j >= 10:
+        try:
+            driver.find_element(By.XPATH, '//*[@id="listTBODY"]/tr[r]').click()
+            meetDate = driver.find_element(By.NAME, "meetDate").get_attribute('value')
+            meet_type = driver.find_element(By.NAME, "meetType").get_attribute('value')
+            if meet_type == "02" and meetDate == info["meet_date"]:
+                driver.find_element(By.NAME, "update").click()
+                driver.find_element(By.NAME, "offDoc").send_keys("/" + info["number"])
+                driver.find_element(By.NAME, "confirm").click()
+                break
+            else:
+                i -= 1
+                j += 1
+                
+        except:
+            if i == 1:
                 insert = driver.find_element(By.ID, "spanInsert").click()
                 paper_num = driver.find_element(By.NAME, "offDoc").send_keys(info["number"])
 
@@ -100,18 +142,12 @@ while i <= 10:
                 staff = driver.find_element(By.NAME, "undertaker").send_keys(info["staff"])
                 phone = driver.find_element(By.NAME, "undertaker_tel").send_keys(info["phone"])
                 confirm = driver.find_element(By.NAME, "confirm").click()
-            continue
-    except:
-        if i == 1:
-            pre_page.click()
-            i = 10
-        elif i > 1:
-            i -= 1
-        
-print(meetDate, meet_type)
+            elif i > 1:
+                i -= 1
 
-else:
-    print(123)
+
+        
+
 #搜尋"會議通知"
 # try:
 #     driver.find_element(By.LINK_TEXT, '1110108').click()
