@@ -29,132 +29,144 @@ time.sleep(1)
 #舒伃's & 淑如's 會議通知
 
 info = {
-0: {"name": "新竹市樹林頭長春會",
+0: {"name": "新竹市東門扶輪社",
+"come_date": "1110414", # 來文日期
+"meet_date": "1101210", # 開會日期
+"receive_date": "1110421", # 收文日期
+"number": "1110066915", # 收文字號
+"year": 8, # 屆
+"num": 1, # 次
+"meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
+"data_type": 2,  # 1:會議通知, 2: 會議記錄 -----------理監事會end
+# "time_hour": 16, # 會議時間(時)
+# "time_min": 00, # 會議時間(分)
+"indow": "25", # 應到人數
+"sdow": "18", # 實到人數
+"waytou": "", # (含)委託__人
+"day_off": "7", #請假人數
+"start_date": "1110701", # 任期開始日期
+"duration": "1", # 任期__年
+"end_date": "1120630", # 任期結束日期  -----------會員大會end
+"place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點 
+"staff": "李淑如",
+"phone": "03-5352386#302"},
+
+1: {"name": "新興獅子會",
 "come_date": "1110418", # 來文日期
-"meet_date": "1110415", # 開會日期
+"meet_date": "1110320", # 開會日期
 "receive_date": "1110420", # 收文日期
-"number": "1110065846", # 收文字號
-"year": 3, # 屆
+"number": "1110066057", # 收文字號
+"year": 32, # 屆
 "num": 1, # 次
 "meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
 "data_type": 2,  # 1:會議通知, 2: 會議記錄
-"time_hour": 16, # 會議時間(時)
-"time_min": 00, # 會議時間(分)
-"indow": "90", # 應到人數
-"sdow": "50", # 實到人數
+# "time_hour": 11, # 會議時間(時)
+# "time_min": 30, # 會議時間(分)
+"indow": "21", # 應到人數
+"sdow": "15", # 實到人數
+"waytou": "", # (含)委託__人數
+"day_off": "", #請假人數
+"start_date": "1110701", # 任期開始日期
+"duration": 1, # 任期__年
+"end_date": "1120630", # 任期結束日期
+"place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
+"staff": "李淑如",
+"phone": "03-5352386#302"},
+
+2: {"name": "新興獅子會",
+"come_date": "1110418", # 來文日期
+"meet_date": "1110320", # 開會日期
+"receive_date": "1110420", # 收文日期
+"number": "1110066057", # 收文字號
+"year": 32, # 屆
+"num": 1, # 次
+"meet_type": 2,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
+"data_type": 2,  # 1:會議通知, 2: 會議記錄
+# "time_hour": 11, # 會議時間(時)
+# "time_min": 30, # 會議時間(分)
+"indow": "21", # 應到人數
+"sdow": "15", # 實到人數
+"waytou": "", # (含)委託__人數
+"day_off": "", #請假人數
+"start_date": "1110701", # 任期開始日期
+"duration": 1, # 任期__年
+"end_date": "1120630", # 任期結束日期
+"place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
+"staff": "李淑如",
+"phone": "03-5352386#302"},
+
+
+3: {"name": "中正國際獅子會",
+"come_date": "1110413", # 來文日期
+"meet_date": "1110327", # 開會日期
+"receive_date": "1110419", # 收文日期
+"number": "1110065150", # 收文字號
+"year": 42, # 屆
+"num": 1, # 次
+"meet_type": 2,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
+"data_type": 2,  # 1:會議通知, 2: 會議記錄
+# "time_hour": 11, # 會議時間(時)
+# "time_min": 0, # 會議時間(分)
+"indow": "", # 應到人數
+"sdow": "", # 實到人數
 "waytou": "", # (含)委託__人數
 "day_off": "", #請假人數
 "start_date": "", # 任期開始日期
-"duration": "", # 任期__年
+"duration": 1, # 任期__年
 "end_date": "", # 任期結束日期
 "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
 "staff": "李淑如",
-"phone": "03-5352386#302"}
+"phone": "03-5352386#302"},
 
-# 1: {"name": "新竹市樹林頭文化發展協會",
-# "come_date": "1110418", # 來文日期
-# "meet_date": "1110415", # 開會日期
-# "receive_date": "1110420", # 收文日期
-# "number": "1110065840", # 收文字號
-# "year": 5, # 屆
-# "num": 7, # 次
-# "meet_type": 7,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
-# "data_type": 2,  # 1:會議通知, 2: 會議記錄
-# "time_hour": 11, # 會議時間(時)
-# "time_min": 30, # 會議時間(分)
-# "indow": "", # 應到人數
-# "sdow": "", # 實到人數
-# "waytou": "", # (含)委託__人數
-# "day_off": "", #請假人數
-# "start_date": "1110401", # 任期開始日期
-# "duration": 3, # 任期__年
-# "end_date": "1150331", # 任期結束日期
-# "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
-# "staff": "李淑如",
-# "phone": "03-5352386#302"},
-
-# 2: {"name": "新竹市風城健康養生促進會",
-# "come_date": "1110420", # 來文日期
-# "meet_date": "1110413", # 開會日期
-# "receive_date": "1110420", # 收文日期
-# "number": "1110066016", # 收文字號
-# "year": 5, # 屆
-# "num": 7, # 次
-# "meet_type": 7,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
-# "data_type": 2,  # 1:會議通知, 2: 會議記錄
-# "time_hour": 11, # 會議時間(時)
-# "time_min": 0, # 會議時間(分)
-# "indow": "", # 應到人數
-# "sdow": "", # 實到人數
-# "waytou": "", # (含)委託__人數
-# "day_off": "", #請假人數
-# "start_date": "1110401", # 任期開始日期
-# "duration": 3, # 任期__年
-# "end_date": "1150331", # 任期結束日期
-# "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
-# "staff": "李淑如",
-# "phone": "03-5352386#302"},
-
-
-# 3: {"name": "新竹市華夏金城服務協會",
-# "come_date": "1110419", # 來文日期
-# "meet_date": "1110418", # 開會日期
-# "receive_date": "1110420", # 收文日期
-# "number": "1110066010", # 收文字號
-# "year": 5, # 屆
-# "num": 2, # 次
-# "meet_type": 7,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
-# "data_type": 2,  # 1:會議通知, 2: 會議記錄
-# "time_hour": 11, # 會議時間(時)
-# "time_min": 0, # 會議時間(分)
-# "indow": "", # 應到人數
-# "sdow": "", # 實到人數
-# "waytou": "", # (含)委託__人數
-# "day_off": "", #請假人數
-# "start_date": "", # 任期開始日期
-# "duration": 3, # 任期__年
-# "end_date": "", # 任期結束日期
-# "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
-# "staff": "李淑如",
-# "phone": "03-5352386#302"},
-
-# 4: {"name": "新竹市東大福德長青協會",
-# "come_date": "1110417", # 來文日期
-# "meet_date": "1110408", # 開會日期
-# "receive_date": "1110420", # 收文日期
-# "number": "1110065848", # 收文字號
-# "year": 6, # 屆
-# "num": 3, # 次
-# "meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
-# "data_type": 2,  # 1:會議通知, 2: 會議記錄
-# "time_hour": 17, # 會議時間(時)
-# "time_min": 30, # 會議時間(分)
-# "indow": 142, # 應到人數
-# "sdow": 128, # 實到人數
-# "waytou": "", # (含)委託__人數
-# "day_off": 14, #請假人數
-# "start_date": "", # 任期開始日期
-# "duration": 3, # 任期__年
-# "end_date": "", # 任期結束日期
-# "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
-# "staff": "李淑如",
-# "phone": "03-5352386#302"},
-# }
-# first_time_info = {
-#     1: {
-#         "boa_name": "羅志祥", #理事長姓名
-#         "boa_gender": 2, # 1:female, 2:male
-#         "boa_birth": "0560720", #理事長生日 YYYMMDD
-#         "boa_tel": "093228736", # 聯絡電話
-#         "sta_name": "溫淑媛",
-#         "sta_title": "總幹事",
-#         "sta_gender": 1,
-#         "sta_birth": "0480203",
-#         "sta_tel": "03-5318188",
-#         "sta_address": "田美三街2號"
-    # }
+4: {"name": "新竹市東大福德長青協會",
+"come_date": "1110417", # 來文日期
+"meet_date": "1110408", # 開會日期
+"receive_date": "1110420", # 收文日期
+"number": "1110065848", # 收文字號
+"year": 6, # 屆
+"num": 3, # 次
+"meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
+"data_type": 2,  # 1:會議通知, 2: 會議記錄
+"time_hour": 17, # 會議時間(時)
+"time_min": 30, # 會議時間(分)
+"indow": 142, # 應到人數
+"sdow": 128, # 實到人數
+"waytou": "", # (含)委託__人數
+"day_off": 14, #請假人數
+"start_date": "", # 任期開始日期
+"duration": 3, # 任期__年
+"end_date": "", # 任期結束日期
+"place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
+"staff": "李淑如",
+"phone": "03-5352386#302"},
 }
-n = 1
+first_time_info = {
+    0: {
+        "boa_name": "范碧涵", #理事長姓名
+        "boa_gender": 1, # 1:female, 2:male
+        "boa_birth": "0720328", #理事長生日 YYYMMDD
+        "boa_tel": "0986-169986", # 聯絡電話
+        "sta_name": "吳明修",
+        "sta_title": "秘書長",
+        "sta_gender": 2,
+        "sta_birth": "",
+        "sta_tel": "0958-089101",
+        "sta_address": "台北市中山區民權東路3段4號13樓"
+    },
+    1: {
+        "boa_name": "徐文彬", #理事長姓名
+        "boa_gender": 2, # 1:female, 2:male
+        "boa_birth": "0650207", #理事長生日 YYYMMDD
+        "boa_tel": "0910-295642", # 聯絡電話
+        "sta_name": "孟憲群",
+        "sta_title": "秘書",
+        "sta_gender": 0,
+        "sta_birth": "",
+        "sta_tel": "0989-600193",
+        "sta_address": "新竹市延平路3段335巷1弄30號2F"
+    }
+}
+n = 4
 
 driver.switch_to.frame("menuFrame")
 func1_1 = driver.find_elements(By.CLASS_NAME, "sum")[1]
@@ -174,7 +186,7 @@ for i in range(n):
     search = driver.find_element(By.NAME, "pager.keyword")
     search.send_keys(info[i]["name"])
     search.send_keys(u'\ue007')
-    driver.find_element(By.LINK_TEXT, info[i]['name']).click()
+    driver.find_element(By.PARTIAL_LINK_TEXT, info[i]['name']).click()
     # open_menu = driver.find_element(By.ID, "menu1").click()
     #會務活動管理
     # driver.find_element(By.XPATH, '/html/body/div[3]/ul/li[2]/a')
