@@ -29,49 +29,49 @@ time.sleep(1)
 #舒伃's & 淑如's 會議通知
 
 info = {
-0: {"name": "新竹市樹林頭長春會",
-"come_date": "1110418", # 來文日期
-"meet_date": "1110415", # 開會日期
-"receive_date": "1110420", # 收文日期
-"number": "1110065846", # 收文字號
-"year": 3, # 屆
+0: {"name": "新竹市陽光仁愛協會",
+"come_date": "1110420", # 來文日期
+"meet_date": "1110417", # 開會日期
+"receive_date": "1110426", # 收文日期
+"number": "1110068850", # 收文字號
+"year": 15, # 屆
 "num": 1, # 次
 "meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
 "data_type": 2,  # 1:會議通知, 2: 會議記錄
-"time_hour": 16, # 會議時間(時)
-"time_min": 00, # 會議時間(分)
-"indow": "90", # 應到人數
-"sdow": "50", # 實到人數
+"time_hour": 10, # 會議時間(時)
+"time_min": 10, # 會議時間(分)
+"indow": "135", # 應到人數
+"sdow": "72", # 實到人數
 "waytou": "", # (含)委託__人數
 "day_off": "", #請假人數
-"start_date": "", # 任期開始日期
-"duration": "", # 任期__年
-"end_date": "", # 任期結束日期
+"start_date": "1110417", # 任期開始日期
+"duration": "2", # 任期__年
+"end_date": "1130416", # 任期結束日期
 "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
 "staff": "李淑如",
-"phone": "03-5352386#302"}
+"phone": "03-5352386#302"},
 
-# 1: {"name": "新竹市樹林頭文化發展協會",
-# "come_date": "1110418", # 來文日期
-# "meet_date": "1110415", # 開會日期
-# "receive_date": "1110420", # 收文日期
-# "number": "1110065840", # 收文字號
-# "year": 5, # 屆
-# "num": 7, # 次
-# "meet_type": 7,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
-# "data_type": 2,  # 1:會議通知, 2: 會議記錄
-# "time_hour": 11, # 會議時間(時)
-# "time_min": 30, # 會議時間(分)
-# "indow": "", # 應到人數
-# "sdow": "", # 實到人數
-# "waytou": "", # (含)委託__人數
-# "day_off": "", #請假人數
-# "start_date": "1110401", # 任期開始日期
-# "duration": 3, # 任期__年
-# "end_date": "1150331", # 任期結束日期
-# "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
-# "staff": "李淑如",
-# "phone": "03-5352386#302"},
+1: {"name": "新竹市埔頂慈雲庵長青會",
+"come_date": "1110410", # 來文日期
+"meet_date": "1110326", # 開會日期
+"receive_date": "1110426", # 收文日期
+"number": "1110068854", # 收文字號
+"year": 1, # 屆
+"num": 1, # 次
+"meet_type": 1,  # 1: 會員大會, 2: 理監事, 7:理監事聯席
+"data_type": 2,  # 1:會議通知, 2: 會議記錄
+"time_hour": 19, # 會議時間(時)
+"time_min": 0, # 會議時間(分)
+"indow": "115", # 應到人數
+"sdow": "79", # 實到人數
+"waytou": "", # (含)委託__人數
+"day_off": "36", #請假人數
+"start_date": "1110326", # 任期開始日期
+"duration": 3, # 任期__年
+"end_date": "1140325", # 任期結束日期
+"place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
+"staff": "李淑如",
+"phone": "03-5352386#302"},
 
 # 2: {"name": "新竹市風城健康養生促進會",
 # "come_date": "1110420", # 來文日期
@@ -139,22 +139,34 @@ info = {
 # "place": "風采宴會館(新竹市中正路245號6樓)", # 會議地點
 # "staff": "李淑如",
 # "phone": "03-5352386#302"},
-# }
-# first_time_info = {
-#     1: {
-#         "boa_name": "羅志祥", #理事長姓名
-#         "boa_gender": 2, # 1:female, 2:male
-#         "boa_birth": "0560720", #理事長生日 YYYMMDD
-#         "boa_tel": "093228736", # 聯絡電話
-#         "sta_name": "溫淑媛",
-#         "sta_title": "總幹事",
-#         "sta_gender": 1,
-#         "sta_birth": "0480203",
-#         "sta_tel": "03-5318188",
-#         "sta_address": "田美三街2號"
-    # }
 }
-n = 1
+first_time_info = {
+    0: {
+        "boa_name": "林少萍", #理事長姓名
+        "boa_gender": 1, # 1:female, 2:male
+        "boa_birth": "0481127", #理事長生日 YYYMMDD
+        "boa_tel": "0918347188 03-5710502", # 聯絡電話
+        "sta_name": "楊東育",
+        "sta_title": "總幹事",
+        "sta_gender": 2,
+        "sta_birth": "0730909",
+        "sta_tel": "03-5539979",
+        "sta_address": "湳雅街183號"
+    },
+    1: {
+        "boa_name": "陳瑞銘", #理事長姓名
+        "boa_gender": 2, # 1:female, 2:male
+        "boa_birth": "0470404", #理事長生日 YYYMMDD
+        "boa_tel": "0933791144", # 聯絡電話
+        "sta_name": "林鳳卿",
+        "sta_title": "總幹事",
+        "sta_gender": 1,
+        "sta_birth": "0530308",
+        "sta_tel": "03-5785067",
+        "sta_address": "埔頂路210巷16號"
+    }
+}
+n = 2
 
 driver.switch_to.frame("menuFrame")
 func1_1 = driver.find_elements(By.CLASS_NAME, "sum")[1]
@@ -174,7 +186,7 @@ for i in range(n):
     search = driver.find_element(By.NAME, "pager.keyword")
     search.send_keys(info[i]["name"])
     search.send_keys(u'\ue007')
-    driver.find_element(By.LINK_TEXT, info[i]['name']).click()
+    driver.find_element(By.PARTIAL_LINK_TEXT, info[i]['name']).click()
     # open_menu = driver.find_element(By.ID, "menu1").click()
     #會務活動管理
     # driver.find_element(By.XPATH, '/html/body/div[3]/ul/li[2]/a')
