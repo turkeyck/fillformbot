@@ -70,7 +70,7 @@ r = 11 - i
 try:
     final_page = driver.find_element(By.PARTIAL_LINK_TEXT, '末頁').click()
     pre_page = driver.find_element(By.PARTIAL_LINK_TEXT, '上一頁')
-    while j > 10:
+    while j <= 10:
         try:
             driver.find_element(By.XPATH, '//*[@id="listTBODY"]/tr[i]').click()
             meetDate = driver.find_element(By.NAME, "meetDate").get_attribute('value')
@@ -84,6 +84,7 @@ try:
                 i -= 1
                 j += 1
                 if j >= 10:
+                    # add a new record (instead of modifying...)
                     insert = driver.find_element(By.ID, "spanInsert").click()
                     paper_num = driver.find_element(By.NAME, "offDoc").send_keys(info["number"])
 
@@ -102,6 +103,7 @@ try:
                     phone = driver.find_element(By.NAME, "undertaker_tel").send_keys(info["phone"])
                     confirm = driver.find_element(By.NAME, "confirm").click()
                     break
+                continue
         except:
             if i == 1:
                 pre_page.click()
@@ -109,7 +111,7 @@ try:
             elif i > 1:
                 i -= 1
 except:
-    while j >= 10:
+    while j <= 10:
         try:
             driver.find_element(By.XPATH, '//*[@id="listTBODY"]/tr[r]').click()
             meetDate = driver.find_element(By.NAME, "meetDate").get_attribute('value')
@@ -142,6 +144,7 @@ except:
                 staff = driver.find_element(By.NAME, "undertaker").send_keys(info["staff"])
                 phone = driver.find_element(By.NAME, "undertaker_tel").send_keys(info["phone"])
                 confirm = driver.find_element(By.NAME, "confirm").click()
+                break
             elif i > 1:
                 i -= 1
 
