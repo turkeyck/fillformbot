@@ -4,20 +4,20 @@ from selenium.webdriver.support.ui import Select
 import time
 
 driver= webdriver.Chrome(r"C:\\chromedriver.exe")
-url ='https://swis.hccg.gov.tw/hcss/'
-driver.get(url)
+def launch_old(url, account, password):
+    driver.get(url)
 
-ver_code = input("Please enter verification code:")
-account = driver.find_element(By.NAME, "userID")
-password = driver.find_element(By.NAME, "password")
-veri = driver.find_element(By.NAME, "authRnd")
+    ver_code = input("Please enter verification code:")
+    account = driver.find_element(By.NAME, "userID")
+    password = driver.find_element(By.NAME, "password")
+    veri = driver.find_element(By.NAME, "authRnd")
 
-account.send_keys("010385")
-password.send_keys("chA123456#")
+    account.send_keys(account)
+    password.send_keys(password)
 
-veri.send_keys(ver_code)
-veri.send_keys(u'\ue007')
-time.sleep(1)
+    veri.send_keys(ver_code)
+    veri.send_keys(u'\ue007')
+    
 
 
 # After login...

@@ -1,5 +1,5 @@
-# import meetnoti_old as n_old
-# import meetrecord_old as old
+import meetnoti_old as n_old
+import meetrecord_old as old
 import meetrecord_new as new
 
 info = {
@@ -25,8 +25,13 @@ info = {
 "staff": "李淑如",
 "phone": "03-5352386#302"}
 }
+new_url = input("Please enter URL in new sys:")
+new_acc = input("Please enter account in new sys:")
+new_pw = input("Please enter password in new sys:")
 
-
-
-new.launch_new()
+old_url = input("Please enter URL in old sys:")
+old_acc = input("Please enter account in old sys:")
+old_pw = input("Please enter password in old sys:")
+n_old.launch_old(old_url, old_acc, old_pw)
+new.launch_new(new_url, new_acc, new_pw)
 new.add_record(n=1, info = info)

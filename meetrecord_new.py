@@ -6,24 +6,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 driver= webdriver.Chrome(r"C:\\chromedriver.exe")
-def launch_new():
-    # driver= webdriver.Chrome(r"C:\\chromedriver.exe")
-    url ='https://group.moi.gov.tw/sgms/admin/admin!login.action?isLocal=1'
+def launch_new(url, account, password):
     driver.get(url)
     driver.maximize_window()
 
     login = driver.find_element(By.ID, "normalLogin").click()
     ver_code = input("Please enter verification code:")
-    account = driver.find_element(By.NAME, "username")
-    password = driver.find_element(By.NAME, "password")
     veri = driver.find_element(By.NAME, "kaptcha")
 
-    account.send_keys("HC001")
-    password.send_keys("aaHC001")
-
+    account.send_keys(account)
+    password.send_keys(password)
     veri.send_keys(ver_code)
     veri.send_keys(u'\ue007')
-    time.sleep(1)
 
 
 # After login...
